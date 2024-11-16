@@ -10,13 +10,16 @@ const SwiperComponent = () => {
   return (
     <div className="swiper-container">
       <Swiper
-        spaceBetween={50}
-        slidesPerView={1}
-        navigation
-        pagination={{ clickable: true }}
-        scrollbar={{ draggable: true }}
-        autoplay={{ delay: 2500, disableOnInteraction: false }}
-        loop
+        spaceBetween={50} // space between slides
+        slidesPerView={1} // slides visible at once
+        loop={true} // enables infinite loop
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        }} // navigation arrows
+        pagination={{ clickable: true }} // pagination dots
+        scrollbar={{ draggable: true }} // draggable scrollbar
+        autoplay={{ delay: 2500, disableOnInteraction: false }} // autoplay functionality
         breakpoints={{
           640: { slidesPerView: 1 },
           768: { slidesPerView: 2 },
@@ -46,27 +49,13 @@ const SwiperComponent = () => {
             className="swiper-image"
           />
           <p className="swiper-text">Hello</p>
-        </SwiperSlide>{" "}
-        <SwiperSlide>
-          <img
-            src="https://via.placeholder.com/600x300?text=Slide+3"
-            alt="Slide 3"
-            className="swiper-image"
-          />
-          <p className="swiper-text">Hello</p>
         </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://via.placeholder.com/600x300?text=Slide+3"
-            alt="Slide 3"
-            className="swiper-image"
-          />
-          <p className="swiper-text">Hello</p>
-        </SwiperSlide>
-        {/* Add more slides as needed */}
+        {/* You can add more slides */}
       </Swiper>
 
-      {/* You can also add custom arrows like this */}
+      {/* Navigation arrows */}
+      <div className="swiper-button-next"></div>
+      <div className="swiper-button-prev"></div>
     </div>
   );
 };

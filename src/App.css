@@ -4,7 +4,11 @@
   padding: 2rem;
   text-align: center;
 }
-
+body {
+  background-color: rgb(197, 139, 150); /* Set the background color to pink */
+  margin: 0; /* Remove default body margin */
+  font-family: Arial, sans-serif; /* Optional: Set a default font */
+}
 .logo {
   height: 6em;
   padding: 1.5em;
@@ -42,14 +46,3 @@
 }
 
 /* App.css or SwiperComponent.css */
-.swiper-container {
-  width: 100%;
-  height: 100%;
-  margin: auto;
-}
-
-.swiper-slide img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-}
